@@ -12,13 +12,23 @@
     <div id="app">
       <div class="product-image">
         <a :href="link" target="_blank">
-          <h1>link here</h1>
+          <img :src="image" alt="" />
         </a>
-        <img :src="image" alt="" />
       </div>
       <div class="product-info">
+        <p v-if="inStock">In Stock</p>
+        <p v-else>Out of Stock</p>
+        <button v-on:click="toggleStock">Toggle Stock</button>
         <h1>{{ product }}</h1>
         <p>{{ description }}</p>
+
+        <h2 v-for="variant in variants">
+          <span>{{ variant.color }}</span>
+        </h2>
+
+        <div>
+          <p v-for="detail in details" :key="detail">{{ detail }}</p>
+        </div>
       </div>
     </div>
 
