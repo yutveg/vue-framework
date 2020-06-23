@@ -1,0 +1,15 @@
+#app {
+  display: flex;
+  width: 20%;
+  margin: 0 auto;
+  flex-flow: column nowrap;
+}
+
+.product-image {
+  width: 100%;
+}
+
+.product-image img {
+  object-fit: contain;
+  max-width: 75%;
+}
