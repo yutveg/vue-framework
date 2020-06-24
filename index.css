@@ -9,6 +9,10 @@
   width: 100%;
 }
 
+.detail-p {
+  font-size: 2px;
+}
+
 .product-image img {
   object-fit: contain;
   max-width: 75%;

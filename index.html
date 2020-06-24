@@ -9,29 +9,7 @@
     <title>Product App</title>
   </head>
   <body>
-    <div id="app">
-      <div class="product-image">
-        <a :href="link" target="_blank">
-          <img :src="image" alt="" />
-        </a>
-      </div>
-      <div class="product-info">
-        <p v-if="inStock">In Stock</p>
-        <p v-else>Out of Stock</p>
-        <button v-on:click="toggleStock">Toggle Stock</button>
-        <h1>{{ product }}</h1>
-        <p>{{ description }}</p>
-
-        <h2 v-for="variant in variants">
-          <span>{{ variant.color }}</span>
-        </h2>
-
-        <div>
-          <p v-for="detail in details" :key="detail">{{ detail }}</p>
-        </div>
-      </div>
-    </div>
-
+    <div id="app"></div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="main.js"></script>
   </body>
