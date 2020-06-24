@@ -1,4 +1,10 @@
-vue.component("product", {
+Vue.component("product", {
+  props: {
+    premium: {
+      type: Boolean,
+      required: true,
+    },
+  },
   template: `<div>
   <div class="product-image">
     <a :href="link" target="_blank">
@@ -8,6 +14,7 @@ vue.component("product", {
   <div class="product-info">
     <p v-if="inStock">In Stock</p>
     <p v-else>Out of Stock</p>
+    <p>User is premium: {{ premium }}</p>
     <button v-on:click="toggleStock">Toggle Stock</button>
     <h1>{{ title }}</h1>
 
@@ -63,4 +70,7 @@ vue.component("product", {
 
 var app = new Vue({
   el: "#app",
+  data: {
+    premium: false,
+  },
 });
