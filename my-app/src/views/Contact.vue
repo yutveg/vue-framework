@@ -1,9 +1,9 @@
 <template>
   <div>
     <label>Name</label>
-    <input v-model="input" value="name" />
+    <input v-model="form.name" type="text" name="name" />
     <label>Message</label>
-    <input v-model="input" value="message" />
+    <input v-model="form.message" type="text" name="message" />
   </div>
 </template>
 
@@ -11,8 +11,10 @@
 export default {
   data() {
     return {
-      name: "",
-      message: ""
+      form: {
+        name: "",
+        message: ""
+      }
     };
   }
 };
