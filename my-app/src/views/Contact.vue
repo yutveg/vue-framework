@@ -27,8 +27,15 @@ export default {
     };
   },
   methods: {
-    createCard(e, cardData) {
-      this.cards.push(cardData);
+    createCard(e) {
+      e.preventDefault();
+      let card = {
+        name: this.form.name,
+        message: this.form.message
+      };
+      this.cards.push(card);
+      this.form.name = "";
+      this.form.message = "";
     }
   }
 };
