@@ -9,6 +9,9 @@
 import Contact from "@/components/Contact.vue";
 
 export default {
-  name: "Contact"
+  name: "ContactView",
+  components: {
+    Contact
+  }
 };
 </script>

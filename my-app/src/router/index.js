@@ -21,7 +21,7 @@ Vue.use(VueRouter)
   {
     path: '/contact',
     name: 'Contact',
-    component: () => import('../views/Contact.vue')
+    component: () => import('../views/ContactView.vue')
   }
 ]
 
