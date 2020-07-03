@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>Welcome, {{ user }}</h1>
     <form @submit="createCard">
       <label>Name</label>
       <input v-model="form.name" type="text" name="name" />
@@ -18,6 +19,9 @@
 <script>
 export default {
   name: "Contact",
+  props: {
+    user: String
+  },
   data() {
     return {
       form: {

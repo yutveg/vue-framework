@@ -1,7 +1,8 @@
 <template>
   <div>
     <h1>Contact Form</h1>
-    <Contact />
+    <input v-model="username" />
+    <Contact v-bind:user="user.name" />
   </div>
 </template>
 
@@ -10,8 +11,18 @@ import Contact from "@/components/Contact.vue";
 
 export default {
   name: "ContactView",
+  props: {
+    username: String
+  },
   components: {
     Contact
+  },
+  data() {
+    return {
+      user: {
+        name: ""
+      }
+    };
   }
 };
 </script>
