@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld todos="todos" />
+    <HelloWorld />
   </div>
 </template>
 
@@ -14,7 +14,7 @@ export default {
   components: {
     HelloWorld
   },
-  date() {
+  data: function() {
     return {
       todos: [
         {
@@ -33,6 +33,11 @@ export default {
           completed: true
         }
       ]
+    };
+  },
+  provide: function() {
+    return {
+      todos: this.todos
     };
   }
 };

@@ -1,6 +1,6 @@
 <template>
-  <div class="hello">
-    <Todos v-bind:todos="todos" todos="todos" />
+  <div>
+    <Todos />
   </div>
 </template>
 
@@ -11,8 +11,7 @@ export default {
   name: "HelloWorld",
   components: {
     Todos
-  },
-  props: ["todos"]
+  }
 };
 </script>
 
